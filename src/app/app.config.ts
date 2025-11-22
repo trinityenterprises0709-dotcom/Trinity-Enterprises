@@ -23,6 +23,9 @@ export const appConfig: ApplicationConfig = {
       registrationStrategy: 'registerWhenStable:30000'
     }),
     provideAnimations(),  // ✅ Required for ngx-toastr
-    provideToastr()       // ✅ Registers the ToastrService
+    provideToastr(), provideServiceWorker('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            registrationStrategy: 'registerWhenStable:30000'
+          })       // ✅ Registers the ToastrService
   ]
 };
