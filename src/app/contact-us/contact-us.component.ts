@@ -55,8 +55,8 @@ export class ContactUsComponent {
       company_name: 'TRINITY ENTERPRISES',
       website_link: 'https://www.trinityenterprises.com',
       contact_number: '+91 86290 97449',
-      support_email_1: 'info@trinityenterprises.com',
-      support_email_2: 'contact@trinityenterprises.com'
+      support_email_1: 'info@trinityenterprises.co',
+      support_email_2: 'trinityenterprises0709@gmail.com'
     };
 
 
