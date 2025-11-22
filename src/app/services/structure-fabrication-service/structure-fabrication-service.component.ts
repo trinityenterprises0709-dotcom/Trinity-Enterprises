@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'app-structure-fabrication-service',
-  imports: [CommonModule],
+  imports: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './structure-fabrication-service.component.html',
   styleUrls: ['./structure-fabrication-service.component.css']

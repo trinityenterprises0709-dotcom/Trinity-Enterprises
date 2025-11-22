@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, CUSTOM_ELEMENTS_SCHEMA, Inject, Renderer2, AfterViewInit } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
@@ -8,7 +8,7 @@ import { ClientsComponent } from "../clients/clients.component";
 
 @Component({
   selector: 'app-details',
-  imports: [CommonModule, RouterModule, GalleryComponent, ClientsComponent],
+  imports: [RouterModule, GalleryComponent, ClientsComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']

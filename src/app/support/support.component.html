@@ -24,16 +24,24 @@
             <div class="col-md-6">
               <label for="name" class="form-label">Your Name <span class="text-danger">*</span></label>
               <input id="name" type="text" class="form-control" formControlName="name" placeholder="Your Name" />
-              <div *ngIf="f['name'].touched && f['name'].invalid" class="text-danger mt-1">Name is required.</div>
+              @if (f['name'].touched && f['name'].invalid) {
+                <div class="text-danger mt-1">Name is required.</div>
+              }
             </div>
 
             <div class="col-md-6">
               <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
               <input id="email" type="email" class="form-control" formControlName="email" placeholder="Your Email" />
-              <div *ngIf="f['email'].touched && f['email'].invalid" class="text-danger mt-1">
-                <div *ngIf="f['email'].errors?.['required']">Email is required.</div>
-                <div *ngIf="f['email'].errors?.['email']">Please enter a valid email.</div>
-              </div>
+              @if (f['email'].touched && f['email'].invalid) {
+                <div class="text-danger mt-1">
+                  @if (f['email'].errors?.['required']) {
+                    <div>Email is required.</div>
+                  }
+                  @if (f['email'].errors?.['email']) {
+                    <div>Please enter a valid email.</div>
+                  }
+                </div>
+              }
             </div>
 
             <div class="col-md-12">
@@ -44,14 +52,18 @@
                 <option value="Billing">Billing</option>
                 <option value="General">General</option>
               </select>
-              <div *ngIf="f['issueType'].touched && f['issueType'].invalid" class="text-danger mt-1">Issue type is required.</div>
+              @if (f['issueType'].touched && f['issueType'].invalid) {
+                <div class="text-danger mt-1">Issue type is required.</div>
+              }
             </div>
 
             <div class="col-md-12">
               <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
               <textarea id="message" class="form-control" formControlName="message" rows="6"
-                placeholder="Describe your issue..."></textarea>
-              <div *ngIf="f['message'].touched && f['message'].invalid" class="text-danger mt-1">Message is required.</div>
+              placeholder="Describe your issue..."></textarea>
+              @if (f['message'].touched && f['message'].invalid) {
+                <div class="text-danger mt-1">Message is required.</div>
+              }
             </div>
 
             <div class="col-md-12 text-center">
