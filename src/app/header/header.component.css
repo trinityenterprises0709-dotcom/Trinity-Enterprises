@@ -2,6 +2,18 @@ a {
     text-decoration: none;
 }
 
+/* Add cursor pointer for all navigation links */
+.navmenu ul li a,
+.navmenu ul li a:hover,
+.navmenu .dropdown > a,
+.navmenu .dropdown > a:hover,
+.navmenu .dropdown ul li a,
+.navmenu .dropdown ul li a:hover,
+.navmenu .submenu li a,
+.navmenu .submenu li a:hover {
+    cursor: pointer !important;
+}
+
 /* Allow logo to grow bigger */
 .logo img {
     height: auto;
