@@ -1,0 +1,187 @@
+/* ============================
+   GALLERY STYLES
+   ============================ */
+
+/* Masonry Grid */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+/* Hover zoom effect */
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay Text */
+.portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 15px;
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-info {
+    transform: translateY(0);
+}
+
+.portfolio-info h4 {
+    font-size: 18px;
+    margin: 0 0 5px;
+    color: #fff;
+}
+
+.portfolio-info p {
+    font-size: 14px;
+    margin: 0;
+    color: #ddd;
+}
+
+/* Floating Card Effect */
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Polaroid Style (slight rotation) */
+.portfolio-item:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.portfolio-item:nth-child(odd) {
+    transform: rotate(-1deg);
+}
+
+.portfolio-item:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+/* ============================
+   GLightbox Custom Styling
+   ============================ */
+
+/* Overlay background */
+.glightbox-clean .goverlay {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    z-index: 9998;
+}
+
+/* Close button */
+.glightbox-clean .gclose {
+    font-size: 28px !important;
+    color: #fff !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    right: 20px !important;
+    top: 20px !important;
+    z-index: 9999 !important;
+    /* very important for mobile */
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: all 0.3s ease;
+}
+
+.glightbox-clean .gclose:hover {
+    background: #007bff !important;
+    transform: rotate(90deg);
+}
+
+/* Navigation arrows */
+.glightbox-clean .gnext,
+.glightbox-clean .gprev {
+    font-size: 30px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.glightbox-clean .gnext:hover,
+.glightbox-clean .gprev:hover {
+    background: #007bff;
+    transform: scale(1.2);
+}
+
+/* Image inside lightbox */
+.glightbox-clean .ginner-container img {
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease;
+}
+
+.glightbox-clean .ginner-container img:hover {
+    transform: scale(1.03);
+}
+
+/* Caption text */
+.glightbox-clean .gdesc-inner {
+    font-size: 16px;
+    color: #f1f1f1;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 8px;
+    max-width: 80%;
+    margin: 15px auto 0 auto;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Animation on open */
+.glightbox-clean .gcontainer {
+    animation: fadeInScale 0.4s ease forwards;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ============================
+   Mobile Fix for Close Button
+   ============================ */
+@media (max-width: 768px) {
+    .glightbox-clean .gclose {
+        top: 15px !important;
+        right: 15px !important;
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 22px !important;
+        display: flex !important;
+        z-index: 99999 !important;
+        /* ensures it's above everything */
+    }
+}

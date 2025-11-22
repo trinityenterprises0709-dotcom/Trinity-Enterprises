@@ -1,0 +1,41 @@
+import { Routes } from '@angular/router';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { ClientsComponent } from './clients/clients.component';
+import { PaintingServiceComponent } from './services/painting-service/painting-service.component';
+import { EngineeringDesignServiceComponent } from './services/engineering-design-service/engineering-design-service.component';
+import { EngineeringSolutionsMaintenanceAuditsServiceComponent } from './services/engineering-solutions–maintenance-audits-service/engineering-solutions–maintenance-audits-service.component';
+import { ErectionCommissioningServiceComponent } from './services/erection-commissioning-service/erection-commissioning-service.component';
+import { FacilityMaintenanceServiceComponent } from './services/facility-maintenance-service/facility-maintenance-service.component';
+import { HeavyFabricationServiceComponent } from './services/heavy-fabrication-service/heavy-fabrication-service.component';
+import { IndustrialInsulationServiceComponent } from './services/industrial-insulation-service/industrial-insulation-service.component';
+import { StructureFabricationServiceComponent } from './services/structure-fabrication-service/structure-fabrication-service.component';
+import { WeldingServiceServiceComponent } from './services/welding-service-service/welding-service-service.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsOfServiceComponent } from './terms-of-service/terms-of-service.component';
+import { SupportComponent } from './support/support.component';
+import { PipingProcessUtilitiesFireServiceComponent } from './services/piping–process-utilities-fire-service/piping–process-utilities-fire-service.component';
+
+export const routes: Routes = [
+    { path: '', component: MainLayoutComponent },
+    { path: 'about-us', component: AboutUsComponent },
+    { path: 'contact-us', component: ContactUsComponent },
+    { path: 'gallery', component: GalleryComponent },
+    { path: 'clients', component: ClientsComponent },
+    { path: 'privacy-policy', component: PrivacyPolicyComponent },
+    { path: 'terms-of-service', component: TermsOfServiceComponent },
+    { path: 'support', component: SupportComponent },
+    { path: 'engineering-design-service', component: EngineeringDesignServiceComponent },
+    { path: 'engineering-solutions–maintenance-audits-service', component: EngineeringSolutionsMaintenanceAuditsServiceComponent },
+    { path: 'erection-commissioning-service', component: ErectionCommissioningServiceComponent },
+    { path: 'facility-maintenance-service', component: FacilityMaintenanceServiceComponent },
+    { path: 'heavy-fabrication-service', component: HeavyFabricationServiceComponent },
+    { path: 'industrial-insulation-service', component: IndustrialInsulationServiceComponent },
+    { path: 'painting-service', component: PaintingServiceComponent },
+    { path: 'piping–process-utilities-fire-service', component: PipingProcessUtilitiesFireServiceComponent },
+    { path: 'structure-fabrication-service', component: StructureFabricationServiceComponent },
+    { path: 'welding-service-service', component: WeldingServiceServiceComponent },
+    { path: '**', redirectTo: '', pathMatch: 'full' }
+];

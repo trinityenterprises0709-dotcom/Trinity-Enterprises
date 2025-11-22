@@ -1,0 +1,108 @@
+<!-- Sticky Top Header for Contact & Timing -->
+<div class="top-header">
+  <div class="container-fluid container-xl d-flex justify-content-between align-items-center flex-wrap">
+    <!-- Left: Contact Info -->
+    <div class="top-contact d-flex align-items-center flex-wrap">
+      <a href="tel:+918629097449" class="text-contact"><i class="bi bi-telephone-fill"></i> +91-8629097449</a>
+      <span class="divider">|</span>
+      <a href="mailto:info@trinityenterprises.com" class="text-contact"><i class="bi bi-envelope-fill"></i> info@trinityenterprises.com</a>
+    </div>
+
+    <!-- Right: Working Time -->
+    <div class="working-time">
+      <i class="bi bi-clock-fill"></i> Mon-Sat 09:00 am to 7:00 pm
+    </div>
+  </div>
+</div>
+
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+    <!-- Logo with routerLink -->
+    <a href="javascript:void(0)" routerLink="/" class="logo d-flex align-items-center">
+      <img src="../../shared/img/Trinity-Enterprises-Logo.png" alt="TRINITY-ENTERPRISES-LOGO">
+      <!-- <h1 class="sitename">TRINITY ENTERPRISES</h1> -->
+    </a>
+
+    <!-- Navigation menu -->
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <!-- Home link -->
+        <li><a href="javascript:void(0)" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">Home</a>
+        </li>
+
+        <!-- About Us link -->
+        <li><a href="javascript:void(0)" routerLink="/about-us" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">About Us</a>
+        </li>
+
+        <!-- Services Dropdown -->
+        <li class="dropdown">
+          <a href="javascript:void(0)" (click)="toggleDropdown($event, $any($event.currentTarget).nextElementSibling)">
+            <span style="display: flex; align-items: center;">
+              Services <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </span>
+          </a>
+          <ul>
+            <li>
+              <a href="javascript:void(0)" routerLink="/engineering-design-service" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">Engineering Design</a>
+            </li>
+
+            <li class="dropdown">
+              <a href="javascript:void(0)"
+                (click)="toggleDropdown($event, $any($event.currentTarget).nextElementSibling)">
+                <span style="display: flex; align-items: center;">
+                  Structure Fabrication & Erection <i class="bi bi-chevron-down toggle-dropdown"></i>
+                </span>
+              </a>
+              <ul class="submenu">
+                <li><a href="javascript:void(0)" routerLink="/structure-fabrication-service" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">Structure Fabrication</a>
+                </li>
+                <li><a href="javascript:void(0)" routerLink="/erection-commissioning-service" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">Erection &
+                    Commissioning</a></li>
+                <li><a href="javascript:void(0)" routerLink="/heavy-fabrication-service" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">Heavy Fabrication</a></li>
+                <li><a href="javascript:void(0)" routerLink="/welding-service-service" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">Welding Services</a></li>
+              </ul>
+            </li>
+
+            <li><a href="javascript:void(0)" routerLink="/piping–process-utilities-fire-service"
+                routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                (click)="onLinkClick($event)">Piping – Process, Utilities & Fire</a></li>
+            <li><a href="javascript:void(0)" routerLink="/facility-maintenance-service" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">Facility Maintenance</a></li>
+            <li><a href="javascript:void(0)" routerLink="/painting-service" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">Painting
+                Services</a></li>
+            <li><a href="javascript:void(0)" routerLink="/industrial-insulation-service" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">Industrial Insulation
+                Service</a></li>
+            <li><a href="javascript:void(0)" routerLink="/engineering-solutions–maintenance-audits-service"
+                routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                (click)="onLinkClick($event)">Engineering Solutions – Maintenance, O&M and Audits</a></li>
+          </ul>
+        </li>
+
+        <!-- Gallery link -->
+        <li><a href="javascript:void(0)" routerLink="/gallery" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">Gallery</a></li>
+        <!-- Clients link -->
+        <li><a href="javascript:void(0)" routerLink="/clients" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">Clients</a></li>
+        <!-- Contact link -->
+        <li><a href="javascript:void(0)" routerLink="/contact-us" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }" (click)="onLinkClick($event)">Contact US</a></li>
+      </ul>
+
+      <!-- Mobile Navigation toggle -->
+      <i (click)="onMobileMode()" class="mobile-nav-toggle d-xl-none bi"
+        [ngClass]="isMenuOpen ? 'bi-x' : 'bi-list'"></i>
+    </nav>
+  </div>
+</header>

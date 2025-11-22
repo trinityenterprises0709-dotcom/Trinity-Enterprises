@@ -1,0 +1,357 @@
+<main class="main">
+  <!-- Hero Section -->
+  <section id="hero" class="hero section dark-background">
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-center">
+            <h2>Welcome to TRINITY ENTERPRISES</h2>
+            <p>Your All Problem solutions.</p>
+            <a class="btn-get-started" (click)="scrollToSection()">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-item active">
+        <img src="../../shared/img/hero-carousel/hero-carousel-2.jpg" alt="" />
+      </div>
+
+      <div class="carousel-item">
+        <img src="../../shared/img/hero-carousel/hero-carousel-3.jpg" alt="" />
+      </div>
+
+      <div class="carousel-item">
+        <img src="../../shared/img/hero-carousel/hero-carousel-4.jpg" alt="" />
+      </div>
+
+      <div class="carousel-item">
+        <img src="../../shared/img/hero-carousel/hero-carousel-5.jpg" alt="" />
+      </div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+  </section>
+  <!-- /Hero Section -->
+
+  <!-- Why Choose Us Section -->
+  <section id="alt-services" class="alt-services section">
+    <div class="container">
+      <div class="row justify-content-around gy-4">
+        <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <img src="../../shared/img/mission-vision-values.jpg" alt="" />
+        </div>
+
+        <div id="get-started" class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <h3>Why Choose Us</h3>
+
+          <!-- First Icon Box -->
+          <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-easel flex-shrink-0"></i>
+            <div>
+              <h4><a class="stretched-link">Who we are?</a></h4>
+              <p>
+                Founded in 2022, Trinity Enterprises is a trusted provider of
+                engineering, design, heavy erection, fabrication, and project
+                execution services. We specialize in a wide range of projects,
+                including piping, structural installations, fire safety systems,
+                HVAC, and more.
+                <span *ngIf="showMore1">
+                  Our expertise spans the complete lifecycle of projects, from
+                  conceptual design to final execution. With a team of highly
+                  skilled professionals, we combine innovative solutions,
+                  precision engineering, and advanced fabrication techniques to
+                  deliver high-quality, safe, and cost-effective results. At
+                  Trinity Enterprises, we uphold the highest standards of safety
+                  and quality, striving to create designs that not only meet but
+                  exceed expectations while contributing to a sustainable and
+                  efficient future.
+                </span>
+              </p>
+              <a (click)="toggleDetails($event, 1)" class="readmore stretched-link">
+                {{ showMore1 ? "Read Less" : "Read More" }}
+              </a>
+            </div>
+          </div>
+          <!-- End Icon Box -->
+
+          <!-- Second Icon Box -->
+          <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-patch-check flex-shrink-0"></i>
+            <div>
+              <h4><a class="stretched-link">Why we are?</a></h4>
+              <p>
+                At Trinity Enterprises, we are driven by a passion for delivering
+                high-quality, innovative solutions across diverse projects,
+                including piping, structures, fire safety, HVAC, and more.
+                <span *ngIf="showMore2">
+                  We combine expertise, precision, and advanced technologies to
+                  ensure efficient, safe, and cost-effective execution. Since
+                  our founding in 2022, we've focused on exceeding client
+                  expectations, fostering long-term relationships, and ensuring
+                  every project is completed on time, within budget, and to the
+                  highest standards of safety and excellence. Our commitment to
+                  sustainability and integrity makes us a trusted partner in
+                  every project we undertake.
+                </span>
+              </p>
+              <a (click)="toggleDetails($event, 2)" class="readmore stretched-link">
+                {{ showMore2 ? "Read Less" : "Read More" }}
+              </a>
+            </div>
+          </div>
+
+          <!-- Third Icon Box -->
+          <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
+            <i class="bi bi-brightness-high flex-shrink-0"></i>
+            <div>
+              <!-- Wrap heading text with the link -->
+              <h4>
+                <a class="stretched-link">Core Values</a>
+              </h4>
+              <h6><i class="bi bi-check2-all"></i> Safety First</h6>
+              <p>
+                Prioritize safety in every design, operation, and project
+                execution to protect people, equipment, and the environment.
+              </p>
+              <span *ngIf="showMore3">
+                <h6>
+                  <i class="bi bi-check2-all"></i> Precision and Excellence
+                </h6>
+                <p>
+                  Deliver superior-quality engineering designs and flawless
+                  heavy erection services with a commitment to accuracy and
+                  reliability.
+                </p>
+                <h6>
+                  <i class="bi bi-check2-all"></i> Innovation and Adaptability
+                </h6>
+                <p>
+                  Embrace cutting-edge technologies and flexible approaches to
+                  provide creative and efficient solutions tailored to client
+                  needs.
+                </p>
+                <h6>
+                  <i class="bi bi-check"></i> Integrity and Accountability
+                </h6>
+                <p>
+                  Uphold transparency, ethical practices, and responsibility in
+                  all aspects of business to build trust and lasting
+                  partnerships.
+                </p>
+              </span>
+              <!-- Add Read More functionality -->
+              <a (click)="toggleDetails($event, 3)" class="readmore">
+                <span>{{ showMore3 ? "Read Less" : "Read More" }}</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- End Icon Box -->
+
+          <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
+            <i class="bi bi-tv flex-shrink-0"></i>
+            <div>
+              <h4><a class="stretched-link">Vision</a></h4>
+              <p>
+                To be a global leader in engineering design and heavy erection
+                services, driving innovation and sustainability in every project
+                while enhancing industry safety, efficiency, and
+                success worldwide.
+              </p>
+            </div>
+          </div>
+          <!-- End Icon Box -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Why Choose Us Section -->
+
+  <!-- Clients Section -->
+  <section id="clients" class="clients section light-background">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Clients</h2>
+    </div>
+    <!-- End Section Title -->
+
+    <app-clients [showHeader]="false"></app-clients>
+
+  </section>
+  <!-- Clients Section End-->
+
+  <!-- Services Section -->
+  <section id="services" class="services section light-background">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Services</h2>
+    </div>
+    <!-- End Section Title -->
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-city"></i>
+            </div>
+            <h3>Industrial Services</h3>
+            <p>
+              TRINITY ENTERPRISES offers a wide range of industrial services, including door production, jaali doors,
+              welding, fabrication, maintenance, and custom solutions to meet diverse business needs.
+            </p>
+            <a routerLink="/industrial-insulation-service" class="readmore stretched-link">Read more <i
+                class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-pen-ruler"></i>
+            </div>
+            <h3>Heavy Fabrication</h3>
+            <p>
+              TRINITY ENTERPRISES specializes in heavy fabrication services, ensuring precision and quality for all
+              industrial requirements using advanced technology and skilled craftsmanship.
+            </p>
+            <a routerLink="/heavy-fabrication-service" class="readmore stretched-link">Read more <i
+                class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <h3>Erection & Commissioning</h3>
+            <p>
+              TRINITY ENTERPRISES specializes in erection and commissioning services, including plumbing work, pipeline
+              maintenance, equipment installation, and other related industrial solutions, ensuring seamless and
+              efficient operations.
+            </p>
+            <a routerLink="/erection-commissioning-service" class="readmore stretched-link">Read more <i
+                class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-trowel-bricks"></i>
+            </div>
+            <h3>Welding Services</h3>
+            <p>
+              TRINITY ENTERPRISES provides top-notch welding services, handling all types of welding operations and
+              maintenance with precision and expertise.
+            </p>
+            <a routerLink="/welding-service-service" class="readmore stretched-link">Read more <i
+                class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-helmet-safety"></i>
+            </div>
+            <h3>Manpower Supply</h3>
+            <p>
+              TRINITY ENTERPRISES provides skilled manpower supply tailored to support our specialized services, including
+              welding, fabrication, industrial painting, and more.
+            </p>
+            <a routerLink="/engineering-design-service" class="readmore stretched-link">Read more <i
+                class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <h3>Maintenance Or Repair</h3>
+            <p>
+              TRINITY ENTERPRISES specializes in maintenance and repair services, ensuring efficient and timely solutions
+              for all your industrial needs.
+            </p>
+            <a routerLink="/facility-maintenance-service" class="readmore stretched-link">Read more <i
+                class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-toolbox"></i>
+            </div>
+            <h3>Hot And Cold Insulation</h3>
+            <p>
+              TRINITY ENTERPRISES provides top-quality hot and cold insulation services, including insulation of cold
+              storage tanks, ducting, piping, and the use of thermal insulating materials, all delivered with efficiency
+              and promptness.
+            </p>
+            <a routerLink="/industrial-insulation-service" class="readmore stretched-link">Read more <i
+                class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-solid fa-paint-roller"></i>
+            </div>
+            <h3>Painting Services</h3>
+            <p>
+              TRINITY ENTERPRISES provides reliable industrial painting services to meet all your business needs. Our team
+              ensures high-quality finishes with attention to detail. We use advanced techniques and materials to
+              deliver durable and long-lasting results.
+            </p>
+            <a routerLink="/painting-service" class="readmore stretched-link">Read more <i
+                class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="fa-regular fa-handshake"></i>
+            </div>
+            <h3>Engineering Solution</h3>
+            <p>
+              TRINITY ENTERPRISES provides the best engineering solutions, offering advanced mechanical design services to
+              businesses across various industries. Our expert team delivers innovative, efficient, and cost-effective
+              solutions tailored to your needs.
+            </p>
+            <a routerLink="/engineering-solutions–maintenance-audits-service" class="readmore stretched-link">Read more
+              <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- End Service Item -->
+      </div>
+    </div>
+  </section>
+  <!-- /Services Section -->
+
+  <!-- Gallery Section -->
+  <app-gallery [showHeader]="false"></app-gallery>
+  <!-- Gallery Section -->
+
+</main>

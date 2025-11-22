@@ -1,0 +1,161 @@
+a {
+    text-decoration: none;
+}
+
+/* Allow logo to grow bigger */
+.logo img {
+    height: auto;
+    /* let height adjust naturally */
+    max-height: 6rem;
+    /* limit maximum height if needed */
+    width: auto;
+    /* keep aspect ratio */
+    display: block;
+}
+
+
+/* Optional: adjust for mobile */
+@media (max-width: 768px) {
+    .logo img {
+        height: 50px;
+        /* smaller for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+        /* even smaller for very small screens */
+    }
+}
+
+
+.top-header {
+    width: 100%;
+    background-color: #f8f9fa;
+    color: #364d59;
+    font-size: 0.875rem;
+    padding: 8px 0;
+    /* slightly more padding for spacing */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Top Contact Links */
+.top-contact a.text-contact {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* space between links */
+    color: #364d59;
+    font-weight: 500;
+}
+
+.top-contact .divider {
+    margin: 0 10px;
+    /* space around | */
+    color: #364d59;
+}
+
+/* Working time */
+.top-header .working-time {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+
+/* Main Header */
+.header {
+    position: fixed;
+    top: 1.5rem;
+    left: 0;
+    width: 100%;
+    z-index: 1090;
+}
+
+/* Push body content below headers */
+body {
+    padding-top: 112px;
+    /* top-header + main header height */
+}
+
+/* Mobile menu adjustments */
+.navmenu {
+    top: 32px;
+    /* offset from top-header */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .top-header .container-fluid {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .top-header .working-time {
+        justify-content: center;
+    }
+
+    /* Mobile nav should start below both headers */
+    .navmenu.mobile-nav-active {
+        top: 112px;
+        /* combined headers height */
+    }
+
+    /* Mobile menu stays below combined headers */
+    .navmenu {
+        top: 3.5rem;
+        /* offset from top-header */
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .header {
+        position: fixed;
+        top: 3rem;
+        left: 0;
+        width: 100%;
+        z-index: 1090;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        position: fixed;
+        top: 4.5rem;
+        left: 0;
+        width: 100%;
+        z-index: 1090;
+    }
+
+    .navmenu {
+        top: 3.5rem;
+        /* offset from top-header */
+    }
+}
+
+
+/* Hide all dropdowns by default */
+.navmenu .dropdown>ul,
+.navmenu .dropdown .submenu {
+    display: none;
+}
+
+/* Show when parent <li> is active */
+.navmenu .dropdown.dropdown-open>ul,
+.navmenu .dropdown.dropdown-open>.submenu {
+    display: block;
+}
+
+/* Chevron rotation */
+.navmenu .dropdown.dropdown-open>a .bi-chevron-down {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}

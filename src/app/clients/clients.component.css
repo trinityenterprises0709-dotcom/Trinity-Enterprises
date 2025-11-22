@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients {
+  padding: 12px 0;
+}
+
+/* Section title padding bottom override */
+.clients .section-title {
+  padding-bottom: 0;
+}
+
+/* Apply consistent styles to all swiper-slide elements */
+swiper-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Ensures same height for each slide */
+  box-sizing: border-box;
+  padding: 10px; /* Optional: spacing between logos */
+}
+
+/* Uniform styling for all logos */
+swiper-slide img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}

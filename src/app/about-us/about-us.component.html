@@ -1,0 +1,183 @@
+<!-- Page Title -->
+<div class="page-title dark-background" style="background-image: url(../../shared/img/page-title-bg.jpg);">
+  <div class="container position-relative">
+    <h1>About</h1>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="">Home</a></li>
+        <li class="current">About Us</li>
+      </ol>
+    </nav>
+  </div>
+</div><!-- End Page Title -->
+
+<!-- About Section -->
+<section id="about" class="about section">
+
+  <div class="container">
+
+    <div class="row position-relative">
+
+      <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="../../shared/img/about.jpg">
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="inner-title">Welcome To Trinity Enterprises</h2>
+        <div class="our-story">
+          <h4>Est 2022</h4>
+          <h3>Our Story</h3>
+          <p>Founded in 2022, Trinity Enterprises has become a trusted provider of engineering, design, heavy erection,
+            fabrication, and project execution services. Our expertise covers a wide range of projects, including
+            piping, structural installations, fire safety systems, HVAC, and more. We are committed to delivering safe,
+            high-quality, and cost-effective solutions that meet and exceed client expectations while contributing to a
+            sustainable future.</p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> <span>Specialists in piping, structural installations, and fire
+                safety systems.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Comprehensive lifecycle support, from concept to
+                execution.</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Skilled professionals ensuring precision and quality.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /About Section -->
+
+<!-- Alt Services Section -->
+<section id="alt-services" class="alt-services section">
+  <div class="container">
+    <div class="row justify-content-around gy-4">
+      <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <img src="../../shared/img/mission-vision-values.jpg" alt="" />
+      </div>
+
+      <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <h3>Why Choose Us</h3>
+
+        <!-- First Icon Box -->
+        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-easel flex-shrink-0"></i>
+          <div>
+            <h4><a class="stretched-link">Who we are?</a></h4>
+            <p>
+              Founded in 2022, Trinity Enterprises is a trusted provider of
+              engineering, design, heavy erection, fabrication, and project
+              execution services. We specialize in a wide range of projects,
+              including piping, structural installations, fire safety systems,
+              HVAC, and more.
+              <span *ngIf="showMore1">
+                Our expertise spans the complete lifecycle of projects, from
+                conceptual design to final execution. With a team of highly
+                skilled professionals, we combine innovative solutions,
+                precision engineering, and advanced fabrication techniques to
+                deliver high-quality, safe, and cost-effective results. At
+                Trinity Enterprises, we uphold the highest standards of safety
+                and quality, striving to create designs that not only meet but
+                exceed expectations while contributing to a sustainable and
+                efficient future.
+              </span>
+            </p>
+            <a (click)="toggleDetails($event, 1)" class="readmore stretched-link">
+              {{ showMore1 ? "Read Less" : "Read More" }}
+            </a>
+          </div>
+        </div>
+        <!-- End Icon Box -->
+
+        <!-- Second Icon Box -->
+        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-patch-check flex-shrink-0"></i>
+          <div>
+            <h4><a class="stretched-link">Why we are?</a></h4>
+            <p>
+              At Trinity Enterprises, we are driven by a passion for delivering
+              high-quality, innovative solutions across diverse projects,
+              including piping, structures, fire safety, HVAC, and more.
+              <span *ngIf="showMore2">
+                We combine expertise, precision, and advanced technologies to
+                ensure efficient, safe, and cost-effective execution. Since
+                our founding in 2022, we've focused on exceeding client
+                expectations, fostering long-term relationships, and ensuring
+                every project is completed on time, within budget, and to the
+                highest standards of safety and excellence. Our commitment to
+                sustainability and integrity makes us a trusted partner in
+                every project we undertake.
+              </span>
+            </p>
+            <a (click)="toggleDetails($event, 2)" class="readmore stretched-link">
+              {{ showMore2 ? "Read Less" : "Read More" }}
+            </a>
+          </div>
+        </div>
+
+        <!-- Third Icon Box -->
+        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
+          <i class="bi bi-brightness-high flex-shrink-0"></i>
+          <div>
+            <!-- Wrap heading text with the link -->
+            <h4>
+              <a class="stretched-link">Core Values</a>
+            </h4>
+            <h6><i class="bi bi-check2-all"></i> Safety First</h6>
+            <p>
+              Prioritize safety in every design, operation, and project
+              execution to protect people, equipment, and the environment.
+            </p>
+            <span *ngIf="showMore3">
+              <h6>
+                <i class="bi bi-check2-all"></i> Precision and Excellence
+              </h6>
+              <p>
+                Deliver superior-quality engineering designs and flawless
+                heavy erection services with a commitment to accuracy and
+                reliability.
+              </p>
+              <h6>
+                <i class="bi bi-check2-all"></i> Innovation and Adaptability
+              </h6>
+              <p>
+                Embrace cutting-edge technologies and flexible approaches to
+                provide creative and efficient solutions tailored to client
+                needs.
+              </p>
+              <h6>
+                <i class="bi bi-check"></i> Integrity and Accountability
+              </h6>
+              <p>
+                Uphold transparency, ethical practices, and responsibility in
+                all aspects of business to build trust and lasting
+                partnerships.
+              </p>
+            </span>
+            <!-- Add Read More functionality -->
+            <a (click)="toggleDetails($event, 3)" class="readmore">
+              <span>{{ showMore3 ? "Read Less" : "Read More" }}</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- End Icon Box -->
+
+        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
+          <i class="bi bi-tv flex-shrink-0"></i>
+          <div>
+            <h4><a class="stretched-link">Vision</a></h4>
+            <p>
+              To be a global leader in engineering design and heavy erection
+              services, driving innovation and sustainability in every project
+              while enhancing industry safety, efficiency, and
+              success worldwide.
+            </p>
+          </div>
+        </div>
+        <!-- End Icon Box -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Alt Services Section -->

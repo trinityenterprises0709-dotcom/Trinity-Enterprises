@@ -1,0 +1,91 @@
+.mission-vission-values{
+width: 30rem !important;
+height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon-box h6 {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.icon-box h6 i {
+    font-size: 14px;
+    color: yellow;
+    margin-right: 0px;
+    background: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* Ensure the stretched link behaves properly */
+.stretched-link {
+    position: relative;
+    z-index: 1;
+    /* Ensures the link remains above other elements */
+    color: inherit;
+    /* Match parent text color */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.icon-box h4:hover a.stretched-link {
+    color: #feb900;
+}
+
+.readmore {
+    display: inline-flex;
+    align-items: center;
+    color:
+        color-mix(in srgb, var(--default-color), transparent 30%);
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.readmore:hover {
+    color: #feb900;
+}
+
+.icon-box.show-more-active h4 a.stretched-link,
+.icon-box.show-more-active i {
+    color: #feb900;
+}
+
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients {
+  padding: 12px 0;
+}
+
+/* Section title padding bottom override */
+.clients .section-title {
+  padding-bottom: 0;
+}
+
+/* Apply consistent styles to all swiper-slide elements */
+swiper-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Ensures same height for each slide */
+  box-sizing: border-box;
+  padding: 10px; /* Optional: spacing between logos */
+}
+
+/* Uniform styling for all logos */
+swiper-slide img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}

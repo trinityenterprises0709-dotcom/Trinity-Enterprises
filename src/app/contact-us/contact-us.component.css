@@ -1,0 +1,10 @@
+.text-danger {
+  font-size: 0.875rem;
+  color: red;
+}
+
+.text-contact {
+  text-decoration: none;
+  color: #364d59;
+  font-size: 0.875rem; 
+}
